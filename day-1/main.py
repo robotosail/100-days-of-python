@@ -1,7 +1,7 @@
 # prints things onto the console # the \n creates a new line within the line of code
 # print("Hello world\nHello world!\nHello World!")
 
-# concatinating - we can combine different strings so it can be added to another string at the end. it makes it one string
+# concatenating - we can combine different strings so it can be added to another string at the end. it makes it one string
 # print("Hello" + " David")
 
 # allows user input to be taken
