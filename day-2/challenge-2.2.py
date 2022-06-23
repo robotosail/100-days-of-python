@@ -1,4 +1,4 @@
-#-----------BMI Calculator------------
+#-----------BMI Calculator------------#
 # getting the data
 height = input("What is your height in meters: ")
 weight = input("What is your weight in kilograms: ")
