@@ -12,5 +12,6 @@ tip = tip / 100
 result = (bill + bill * tip) / people
 # rounding the result to the second decimail place.
 result = round(result, 2)
+# result = "{:.2f}".format(result) # instead of using round to get to 2 decimal places use "{:.2f}.format()"
 # printing the result.
 print(f"Each person should pay: ${result}")
