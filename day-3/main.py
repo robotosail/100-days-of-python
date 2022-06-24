@@ -28,6 +28,8 @@ if height >= 120:
     elif age <= 18:
         bill = 7
         print("YOuth tickets are $7")
+    elif age >= 45 and age <= 55:
+        print("Everything is going to be ok. Have a free ride. It is on us")
     else:
         bill = 12
         print("Adult tickets are $12.")
@@ -55,4 +57,9 @@ else:
         %           Divdes a number by another number and gives you the remainder
     
 * Remeber that one equal sign means that you are assigning to a variable, while two means you are checking.
+
+# LOGICAL OPERATORS
+    and
+    or
+    not
 '''
