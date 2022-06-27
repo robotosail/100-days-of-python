@@ -1,12 +1,4 @@
-random.choice():
-    picks an item randomly from a list
-    example:
-        names = ["jack", "ben", "dad"]
-        random_Choices = random.choice(names)
-        print(random_Choices)
 
-len():
-    can be used to get the number of characters in a string or the length of a list
 
 '''
 # Comparison Operators
@@ -66,11 +58,35 @@ len():
         # print(type(a))
     
     # Str:-
-        
+        str()
         # 
     # F Strings:-
         # it allows you to mix multiple data types together.
         # use it by putting f in front of the " sign and the puting the different data types inside of a {}
+
+    # Sum:-
+        sum():
+        adds a multople values together and returns the added number
+
+    # random.choice():
+        picks an item randomly from a list
+    
+    # Max:-
+        finds the maximum number within a set of data
+        max(data)
+
+    # Min:-
+        finds the minimum number within a set of data
+        min(data)
+
+    # shuffle:-
+        comes from the random module
+        used to shuffle a data set
+        usage: random.shuffle(x)
+    # len():
+    can be used to get the number of characters in a string or the length of a list
+
+        
 ###
 
 ### Expressions
@@ -86,18 +102,39 @@ len():
 ###
 
                 #--------- Examples ------------
-### Round
-print(round(8/3, 2))
-###
+    ### Round
+    print(round(8/3, 2))
+    ###
 
-### Expressions
-result = 4/2
-result /= 4/2
-###
+    ### Expressions
+    result = 4/2
+    result /= 4/2
+    ###
 
-### F-Strings
-# score = 0
-# height = 1.8
-# winning = True
-# print(f"your score is {score}")
-###
+    ### F-Strings
+    # score = 0
+    # height = 1.8
+    # winning = True
+    # print(f"your score is {score}")
+    ###
+
+    ### Random.choice
+                names = ["jack", "ben", "dad"]
+                random_Choices = random.choice(names)
+                print(random_Choices)
+    ###
+
+    ### Max
+        number = [100, 10, 90]
+        max(number)
+    ###
+
+    ### Min
+        number = [100, 10, 90]
+        min(number)
+    ###
+
+    ### shuffle
+        x = [1,2,3,4]
+        random.shuffle(x)
+    ###
