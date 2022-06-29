@@ -84,8 +84,9 @@
         used to shuffle a data set
         usage: random.shuffle(x)
     # len():
-    can be used to get the number of characters in a string or the length of a list
-
+        can be used to get the number of characters in a string or the length of a list
+    # .join(list):
+        combines the items in a list to a string
         
 ###
 
@@ -137,4 +138,9 @@
     ### shuffle
         x = [1,2,3,4]
         random.shuffle(x)
+    ###
+
+    ###
+        list = ["a", "b", "c"]
+        print(f"{" ".join(list)}")
     ###
