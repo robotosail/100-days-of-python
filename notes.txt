@@ -87,7 +87,9 @@
         can be used to get the number of characters in a string or the length of a list
     # .join(list):
         combines the items in a list to a string
-        
+    # def:
+        it allows you to make your own function
+        the function can also take parameters
 ###
 
 ### Expressions
@@ -140,7 +142,16 @@
         random.shuffle(x)
     ###
 
-    ###
+    ### join
         list = ["a", "b", "c"]
         print(f"{" ".join(list)}")
     ###
+
+    ### def
+        def my_function():
+            print("This is a simple function")
+        my_function()
+        #function with parameters
+        def my_function(name):
+            print(f"Hello {name}")
+        my_function()
