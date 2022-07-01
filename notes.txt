@@ -90,6 +90,8 @@
     # def:
         it allows you to make your own function
         the function can also take parameters
+    # .index():
+        allows you to get the index position of a string from a list
 ###
 
 ### Expressions
@@ -155,3 +157,8 @@
         def my_function(name):
             print(f"Hello {name}")
         my_function()
+    ###
+
+    ### .index()
+        fruits = ["apple", "bannana", "cherry", "mango"]
+        x = fruits.index("bannana")
