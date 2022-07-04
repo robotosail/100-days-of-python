@@ -92,6 +92,15 @@
         the function can also take parameters
     # .index():
         allows you to get the index position of a string from a list
+    # .title():
+        turns things to camel case
+    # docstrings:
+        informs what the code does
+        it must be at the start 
+    # remove():
+        searches for the first instance of the element and removes it 
+    # pop():
+        removes and returns the elements at the given index
 ###
 
 ### Expressions
@@ -162,3 +171,13 @@
     ### .index()
         fruits = ["apple", "bannana", "cherry", "mango"]
         x = fruits.index("bannana")
+    ###
+
+    ### .title()
+        "DAvid".title()
+        output >> David
+    ###
+
+    ### docstrings
+    def help():
+        """ It helps """
