@@ -1,5 +1,6 @@
 #-----------------Blind auction----------------#
 import os
+from art import logo
 # creating a dictionary to hold the bids and the names of the bidders
 bids = {}
 bidding = True
@@ -24,6 +25,7 @@ def autctioneer(record):
 # while bidding is true run 
 while bidding == True:
     # getting user input
+    print(logo)
     name = input("What is your name: ")
     bid = int(input("How much are you bidding: $"))
     again = input(
