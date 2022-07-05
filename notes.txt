@@ -103,7 +103,7 @@
         removes and returns the elements at the given index
 ###
 
-### Expressions
+### Expressions:
     # Mathematical expression
     # 3 + 5 # the addition sign
     # 3 - 5 # the subtraction sign
@@ -115,7 +115,7 @@
     # result /= 4/2 # The /= continues the division
 ###
 
-                #--------- Examples ------------
+#--------- Examples ------------
     ### Round
     print(round(8/3, 2))
     ###
@@ -181,3 +181,35 @@
     ### docstrings
     def help():
         """ It helps """
+#----------#
+
+# Global Scope:
+    # player_health = 10
+
+    # def game():
+    #     def drink_potion():
+    #         # the variable player_health is accessible for all because it is a global scope
+    #         potion_strength = 2
+    #         print(player_health)
+    #     # putting the function call outside of the game function doesn't allow it to be called because it doesn't have access to the game function
+    #     drink_potion()
+    # inorder to get access to the global scope in a function you use the key word global
+
+    Example:
+    player_health = 1
+    def game():
+        global player_health
+        player_health = 2
+        print(player_health)
+    game()
+
+
+# Local Scope - it exists within functions
+
+    # def drink_potion():
+    #     # the variable potion_strength is only accessible in this function
+    #     potion_strength = 2
+    #     print(potion_strength)
+
+    # drink_potion()
+    # print(potion_strength)
