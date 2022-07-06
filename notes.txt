@@ -101,6 +101,8 @@
         searches for the first instance of the element and removes it 
     # pop():
         removes and returns the elements at the given index
+    # capitalize():
+        capitalizes strings
 ###
 
 ### Expressions:
@@ -181,6 +183,11 @@
     ### docstrings
     def help():
         """ It helps """
+    ###
+
+    ### capitalize()
+        "faskdl".capitalize()
+    ###
 #----------#
 
 # Global Scope:
