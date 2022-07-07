@@ -103,6 +103,10 @@
         removes and returns the elements at the given index
     # capitalize():
         capitalizes strings
+    # pass:
+        allows for empty functions
+    # class keyword:
+        creates a new class
 ###
 
 ### Expressions:
@@ -187,6 +191,21 @@
 
     ### capitalize()
         "faskdl".capitalize()
+    ###
+
+    ### pass:
+        def empty():
+            pass
+    ###
+
+    ### class:
+        class Empty():
+            pass
+    ###
+
+    ### pass:
+        def empty():
+            pass
     ###
 #----------#
 
