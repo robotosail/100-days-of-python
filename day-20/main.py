@@ -29,8 +29,8 @@ on = True
 
 while on:
     screen.update()
-    for seg in segments:
-        segt.forward(20)
+    for segment in segments:
+        segment.fd(20)
         # adds a 1 second delay to the program
         time.sleep(1)
 
