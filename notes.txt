@@ -41,6 +41,28 @@
     # Boolean:
         # True.
         # False.
+    # list:
+        an array of things differenciated by the [] symbol
+        each item in a list is seperated by a comma
+        things are gotten by their index value
+
+        ## usage:
+            list = ["hi", "2"]
+            print(list[0])
+    # dict/dictionaries:
+        they are initialized by using the {} symbol
+        things are gotten in key and values
+        each item must have quotations around it
+        ## usage:
+            dict = {"key": "value"}
+            print(dict["key"])
+    # tuples:
+        similar to list only differenciated by the () instead of a []
+        similar to list it uses index position to get an item
+        Unlike the values of tuples cannot be changed it stays constant
+        ## usage:
+            my_tuple = (1, 2, 3)
+            print(my_tuple[0])
 
 # Functions:
     # Type:-
@@ -239,3 +261,19 @@
 
     # drink_potion()
     # print(potion_strength)
+
+## imports:
+    # Basic import
+        # import turtle
+        # turtle = turtle.Turtle()
+
+    # from import
+        from turtle import turtle
+        # turtle = Turtle()
+    # import all
+        it allows for easy access but can get confused with other functions in your code
+        from turtle import *
+        forward(100)
+    # import as alias
+        # from turtle import whatevernameyouwant
+        turtle = whatevernameyouwant()
