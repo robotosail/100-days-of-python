@@ -129,6 +129,9 @@
         allows for empty functions
     # class keyword:
         creates a new class
+    # Class inheritance:
+        allows a specific class to inherit some traits from another class.
+        it avoids repetition
 ###
 
 ### Expressions:
@@ -228,6 +231,12 @@
     ### pass:
         def empty():
             pass
+    ###
+
+    ### inheritance:
+        class Fish(the class you want to inherit):
+            def __init__(self):
+                super.()__init__()
     ###
 #----------#
 

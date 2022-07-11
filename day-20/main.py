@@ -1,6 +1,8 @@
 import turtle
+from snake import Snake
 import random
 import time
+import food
 
 colors = ["red", "yellow", "green", "blue"]
 
@@ -14,24 +16,23 @@ screen.title("Snake Game")
 # turning of the animation
 screen.tracer(0)
 
-starting_positions = [(0, 0), (-20, 0), (-40, 0)]
-segments = []
-# creating 3 turtle body
-for position in starting_positions:
-    new_segment = turtle.Turtle(shape="square")
-    new_segment.color("limegreen")
-    new_segment.penup()
-    new_segment.goto(position)
-    segments.append(new_segment)
+snake = Snake()
+food = food.Food()
 
+
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
 
 on = True
-
+# updating the screen on every movement
 while on:
     screen.update()
-    for segment in segments:
-        segment.fd(20)
-        # adds a 1 second delay to the program
-        time.sleep(1)
-
+    # adds a 1 second delay to the program
+    time.sleep(0.1)
+    snake.move()
+    # segments[0].forward(20)
+    # segments[0].left(90)
 screen.exitonclick()
