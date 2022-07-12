@@ -286,3 +286,15 @@
     # import as alias
         # from turtle import whatevernameyouwant
         turtle = whatevernameyouwant()
+
+    # slice:
+        the first digit it the start to splice the list the second digit specifies where to stop, the third digit specifies the step count
+        # works with tuples
+        piano = [1,2,3,4,5,6,7]
+        # gets every from index two to the end of the list so - 3, 4, 5, 6, 7
+        print(piano[2:])
+        # gets every from index two to 5 from the list so - 3, 4, 5, 6
+        print(piano[2:5])
+        # gets every from index two to 5 from the list and steps by 2 so - 3, 4, 5, 6
+        print(piano[2:5:2])
+        print(piano[::2])

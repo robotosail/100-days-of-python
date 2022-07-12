@@ -3,6 +3,7 @@ from snake import Snake
 import random
 import time
 import food
+import scoreboard
 
 colors = ["red", "yellow", "green", "blue"]
 
@@ -10,7 +11,7 @@ screen = turtle.Screen()
 # setting up the screen
 screen.setup(width=600, height=600)
 # setting the screen color
-screen.bgcolor("grey")
+screen.bgcolor("black")
 # setting the title of the screen
 screen.title("Snake Game")
 # turning of the animation
@@ -18,7 +19,7 @@ screen.tracer(0)
 
 snake = Snake()
 food = food.Food()
-
+score_board = scoreboard.ScoreBoard()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -33,6 +34,21 @@ while on:
     # adds a 1 second delay to the program
     time.sleep(0.1)
     snake.move()
-    # segments[0].forward(20)
-    # segments[0].left(90)
+    # detect collision with food
+    # if the snake head is withing 15 pixels of the food
+    if snake.head.distance(food) < 15:
+        food.refresh()
+        snake.extend()
+        score_board.increaseScore()
+
+    # detect collision with wall
+    if snake.head.xcor() > 295 or snake.head.xcor() < -295 or snake.head.ycor() > 295 or snake.head.ycor() < -295:
+        on = False
+        score_board.gameOver()
+
+    # detect collision with tail
+    for body in snake.segments[1:]:
+        if snake.head.distance(body) < 10:
+            on = False
+            score_board.gameOver()
 screen.exitonclick()

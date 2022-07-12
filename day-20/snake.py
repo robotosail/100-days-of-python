@@ -19,15 +19,7 @@ class Snake:
     def createSnake(self):
         # looping the starting postion list
         for position in STARTING_POSITION:
-            # creating a new turtle object with a square shape and a color of limegreen
-            new_segment = turtle.Turtle(shape="square")
-            new_segment.color("limegreen")
-            # putting the pen up
-            new_segment.penup()
-            # make it go to a position
-            new_segment.goto(position)
-            # appending the new object to the segment list
-            self.segments.append(new_segment)
+            self.add_segment(position)
 
     def move(self):
         # looping backwards through the segments
@@ -62,3 +54,18 @@ class Snake:
         if self.head.heading() != LEFT:
             # changing the heading to go right
             self.head.seth(RIGHT)
+
+    def add_segment(self, position):
+        # creating a new turtle object with a square shape and a color of limegreen
+        new_segment = turtle.Turtle(shape="square")
+        new_segment.color("limegreen")
+        # putting the pen up
+        new_segment.penup()
+        # make it go to a position
+        new_segment.goto(position)
+        # appending the new object to the segment list
+        self.segments.append(new_segment)
+
+    def extend(self):
+        # adding to the snake body each time it eats food
+        self.add_segment(self.segments[-1].position())
