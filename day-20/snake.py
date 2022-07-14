@@ -69,3 +69,11 @@ class Snake:
     def extend(self):
         # adding to the snake body each time it eats food
         self.add_segment(self.segments[-1].position())
+
+    def reset(self):
+        for segment in self.segments:
+            segment.goto(1000, 1000)
+        # clears the list
+        self.segments.clear()
+        self.createSnake()
+        self.head = self.segments[0]

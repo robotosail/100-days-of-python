@@ -131,7 +131,14 @@
         creates a new class
     # Class inheritance:
         allows a specific class to inherit some traits from another class.
-        it avoids repetition
+        it avoids repetition   
+    # clear:
+        empties a the values in a list
+    # open:
+        opens a file
+        allows you to read or edit the file
+    # close:
+        make sure to close the file to save memory
 ###
 
 ### Expressions:
@@ -147,6 +154,28 @@
 ###
 
 #--------- Examples ------------
+    ### open
+        ## to read a file
+            file = open("the file you want to open")
+            contents = file.read() # returns the contents in the file
+
+            #better practice
+            with open("the file you want to open") as file:
+                contents = file.read()
+                print(contents)
+
+        ## write into a file
+        if the file doesn't exist is creates it for you
+            with open("test.txt", mode="w") as file: # w stands for write
+                file.write("This is a test")    <----------------|
+            * note this method deletes everything in the file ---|
+
+            with open("test.txt", mode="a") as file: # a stands for append
+                file.write("This is a text")
+
+            * the difference is that a appends to the file
+    ###
+    
     ### Round
     print(round(8/3, 2))
     ###
@@ -231,6 +260,11 @@
     ### pass:
         def empty():
             pass
+    ###
+
+    ### clear():
+        list= [12, 123, 1234]
+        list.clear()
     ###
 
     ### inheritance:
