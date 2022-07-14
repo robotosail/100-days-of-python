@@ -26,7 +26,9 @@ while game_is_on:
     for c in car.cars:
         if c.distance(player) < 35:
             game_is_on = False
+            scoreboard.gameOver()
     if player.finish():
+        scoreboard.incrlvl()
         player.reset_pos()
         car.level_up()
 
