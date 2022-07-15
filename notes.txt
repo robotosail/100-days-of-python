@@ -134,11 +134,17 @@
         it avoids repetition   
     # clear:
         empties a the values in a list
+    # strip():
+        removes whitespaces or any specified characters from a string
     # open:
         opens a file
         allows you to read or edit the file
-    # close:
+    # close():
         make sure to close the file to save memory
+    # read():
+        allows you to read a file
+    # readlines():
+        allows you to read a file and return its output as a string
 ###
 
 ### Expressions:
@@ -154,6 +160,10 @@
 ###
 
 #--------- Examples ------------
+    ### Strip
+        char = "dsajlfkdsajl kldsajflkdsajf"
+        print(char.strip())
+    ###
     ### open
         ## to read a file
             file = open("the file you want to open")
