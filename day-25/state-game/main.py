@@ -19,7 +19,6 @@ turtle.shape(image)
 guessed_states = []
 on = True
 # holds states not guessed
-states_to_learn = []
 
 # while loop continues until all 50 states are guessed correctly
 while len(guessed_states) < 50:
@@ -27,9 +26,13 @@ while len(guessed_states) < 50:
         f"{len(guessed_states)}/50 states correct", "Name a state").title()
 
     if guess == "Exit":
-        for state in all_states:
-            if state not in guessed_states:
-                states_to_learn.append(state)
+        # using list comprehension ot shorten code
+        states_to_learn = [
+            state for state in all_states if state not in guessed_states]
+
+        # for state in all_states:
+        #     if state not in guessed_states:
+        #         states_to_learn.append(state)
 
         data_to_learn = pandas.DataFrame(states_to_learn)
         data_to_learn.to_csv("states_to_learn.csv")
