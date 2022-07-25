@@ -145,6 +145,12 @@
         allows you to read a file
     # readlines():
         allows you to read a file and return its output as a string
+    # Json.dump():
+        writes data to json format
+    # Json.load():
+        reads the json data
+    # Json.update():
+        updates the json data
 ###
 
 ### Expressions:
