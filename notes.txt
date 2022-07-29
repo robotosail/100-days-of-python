@@ -151,6 +151,16 @@
         reads the json data
     # Json.update():
         updates the json data
+    # type hints for variables:
+        age:int
+        age = 17
+    # type hints for function output
+        def check(age:int) -> bool:
+            if age > 18:
+                candrive = True
+            else:
+                candrive = False
+            return candrive
 ###
 
 ### Expressions:
