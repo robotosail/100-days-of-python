@@ -3,14 +3,14 @@ import requests
 # working with enviroment variables
 import os
 # from twilio.rest import client
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.environ.get("API_KEY")
 account_sid = ""
 auth_token = ""
 
 params = {
     "lat": 41.053429,
     "long": -73.538734,
-    "appid": API_KEY}
+    "appid": "905e7f42213c5b41c396c13f977f72e2"}
 
 # creating a fetch request
 response = requests.get(
