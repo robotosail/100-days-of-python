@@ -5,9 +5,11 @@ from tkinter import messagebox
 from random import randint, shuffle, choice
 import pyperclip
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
-
+json_file = "../../data.json"
 
 # generating a password
+
+
 def gen_pwd():
     letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
                "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -63,19 +65,19 @@ def save_data():
             # checking if the data.json file already exists
             try:
                 # reading json data file
-                with open("data.json", mode="r") as file:
+                with open(json_file, mode="r") as file:
                     # reading old data
                     data = json.load(file)
             # catching error by creating the file
             except FileNotFoundError:
-                with open("data.json", mode="w") as file:
+                with open(json_file, mode="w") as file:
                     # writing data into json file
                     json.dump(new_json_data, file, indent=4)
             else:
                 # updating the json data
                 data.update(new_json_data)
 
-                with open("data.json", mode="w") as file:
+                with open(json_file, mode="w") as file:
                     # writing data into json file
                     json.dump(data, file, indent=4)
             finally:
@@ -91,7 +93,7 @@ def search_data():
     # catching errors
     try:
         # opening the json file
-        with open("data.json") as file:
+        with open(json_file) as file:
             data = json.load(file)
 
     except FileNotFoundError:
