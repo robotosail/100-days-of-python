@@ -1,3 +1,5 @@
+# ----------- Workout tracker---------------##
+
 import requests
 from datetime import datetime
 import os
@@ -26,7 +28,9 @@ params = {
     "age": 30
 }
 
+# posting the data
 response = requests.post(url=url, headers=headers, json=params)
+# getting the response data back
 result = response.json()
 # formating the date
 today_date = datetime.now().strftime("%d/%m/%Y")
@@ -43,6 +47,7 @@ for exercise in result["exercises"]:
             "calories": exercise["nf_calories"]
         }
     }
+    # setting the authorization
     bearer_headers = {
         "Authorization": "Bearer hjvlkafmdsaolvm"
     }
