@@ -1,7 +1,7 @@
 from os import pardir
 import data_manager
 import requests
-
+#
 url = "https://tequilla-api.kiwi.com/locations/query"
 # API_KEY = "KefD5-cTjTvRK1zZrQ9zbGRS4302meP_"
 API_KEY = "GWNyR5BSGiO9Q_zVTo7oPWzWhWehbMAi"
