@@ -1,0 +1,16 @@
+body {
+    background-color: lightcyan;
+}
+
+hr {
+    border-style: dotted none none none;
+    width: 5%;
+    border-color: grey;
+    border-width: 5px;
+
+}
+
+h1,
+h3 {
+    color: teal;
+}

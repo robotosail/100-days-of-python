@@ -1,0 +1,26 @@
+body {
+    margin: 0%;
+}
+
+
+h1 {
+    margin: 0;
+}
+
+.top-container {
+    background-color: tomato;
+}
+
+.middle-container {
+    background-color: antiquewhite;
+    width: 200px;
+    height: 200px;
+}
+
+.bottom-container {
+    background-color: bisque;
+    width: 200px;
+    height: 200px;
+}
+
+/* inline takes the width of the element */
