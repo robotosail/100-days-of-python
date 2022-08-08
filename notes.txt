@@ -358,3 +358,16 @@
         # gets every from index two to 5 from the list and steps by 2 so - 3, 4, 5, 6
         print(piano[2:5:2])
         print(piano[::2])
+
+interms of font size
+562.5% => 90px, 100% => 16px, 1em = 16px
+em and percentages get inherited from the parent
+so if the parent has a default font size and the child has a font-size both font sizes will be added together
+rem ignores all of the parents default font size and uses its own in the em 
+rem should be the perferred unit
+
+float:
+it works with itmes that generate boxes, and don't have absolute values
+
+clear:
+it is the opposite of float, it makes sure the item isn't adjacent to the other items
