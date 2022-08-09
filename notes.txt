@@ -371,3 +371,17 @@ it works with itmes that generate boxes, and don't have absolute values
 
 clear:
 it is the opposite of float, it makes sure the item isn't adjacent to the other items
+
+Setting Environment Variables in command prompt:
+
+    method 1 (Temporary - deletes when terminal is exited):
+        set Key=value
+
+    method 2 (permanent - stays even upon exiting terminal):
+        setx key "value"
+
+Setting Environment Variables in powershell:
+    method 1 (permanent - stays even upon exiting terminal):
+        setx key "value"
+    method 2 (Temporary - deletes once terminal is closed):
+        $Env:key = "value"
