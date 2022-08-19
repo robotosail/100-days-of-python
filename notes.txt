@@ -437,3 +437,28 @@ Beautiful Soup usage:
     # print(headings)
 
 
+
+Flask basic setup:
+    create a file then type
+    from flask import Flask
+    app = Flask(__name__)
+
+    @app.route("/")
+    def Hello_world():
+        return "Hello world"
+
+    open the terminal and temporarily add the file to the Environment variable by typing
+    $env:FLASK_APP = "yourfile.py"
+
+    or
+
+    setx FLASK_APP "yourfile.py"
+
+    when your done change the word directory to the location of the file
+    then run flask run
+
+    or if you don't want to, you can use 
+    python -m flask run instead of flask run
+
+
+z-index in css only works when all elements position is set

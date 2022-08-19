@@ -1,0 +1,207 @@
+body {
+    font-family: 'Montserrat';
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+
+.container-fluid {
+    padding: 7% 15%;
+}
+
+/* Sections */
+.colored-section {
+    color: white;
+    background-color: var(--td-bg-color);
+}
+
+.white-section {
+    background-color: white;
+    color: var(--td-bg-color);
+}
+
+
+.big-heading {
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+/* Navigation Bar */
+.navbar {
+    padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+    font-family: 'Ubuntu';
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+
+/* Download Buttons */
+.download-btn {
+    margin: 5% 3% 5% 0;
+}
+
+
+#title .container-fluid {
+    padding: 3% 15% 7%;
+    text-align: left;
+}
+
+/* TItle Image  */
+.title-img {
+    width: 60%;
+    transform: rotate(25deg);
+    position: absolute;
+}
+
+.iphone-container {
+    position: relative;
+}
+
+/* features */
+#features {
+    position: relative;
+}
+
+.feature-box {
+
+    padding: 9%;
+}
+
+
+#features p {
+    color: #8f8f8f;
+}
+
+
+.icons {
+    font-size: 60px;
+    margin-bottom: 1rem;
+}
+
+.icons:hover {
+    /* color: #ff4c68; */
+    /* color: rgb(216, 162, 216); */
+    color: rgb(6, 159, 219);
+    transition: 0.3s ease-in-out;
+}
+
+/* Testimonials */
+
+.testimonial-img {
+    width: 15%;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+#press {
+    padding-bottom: 3%;
+}
+
+.press-logo {
+    width: 15%;
+    margin: 20px 20px 50px
+}
+
+/* [aria-hidden="true"] {
+    width: 4rem;
+    height: 4rem;
+} */
+
+/* Pricing section */
+#pricing {
+    padding: 100px;
+
+}
+
+.pricing-col {
+    padding: 3% 2%;
+}
+
+.signup {
+    background-color: white;
+    color: var(--td-btn-normal-bg-color);
+    border: var(--td-btn-normal-bg-color) 1px solid;
+}
+
+.signup:hover {
+    background-color: var(--td-btn-hover-bg-color);
+    color: white;
+}
+
+.signup:focus {
+    background-color: var(--td-btn-focus-bg-color);
+    border-color: var(--td-btn-focus-bc);
+    /* box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); */
+    box-shadow: var(--td-btn-box-shadow);
+}
+
+.signup:focus:not(:hover) {
+    color: white;
+}
+
+@media (max-width:1028px) {
+    .title-img {
+        position: static;
+        transform: rotate(0);
+    }
+
+    #title {
+        text-align: center;
+    }
+}
+
+.social-icon {
+    margin: 1%;
+    font-size: 30px;
+}
+
+.fa-instagram {
+    background: linear-gradient(purple, red, orange);
+    font-weight: bold;
+    border-radius: 9px 9px 7px 7px;
+    width: 26px;
+    height: 25px;
+    color: black;
+
+}
+
+:root {
+    --td-btn-normal-bg-color: rgb(85, 132, 150);
+    --td-btn-hover-bg-color: rgb(175, 211, 225);
+    --td-btn-focus-bg-color: rgb(181, 214, 226);
+    --td-btn-focus-bc: rgb(155, 209, 231);
+    --td-btn-box-shadow: 0 0 0 0.25rem rgb(166, 201, 215);
+    --td-bg-color: skyblue;
+}

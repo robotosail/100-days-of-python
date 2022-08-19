@@ -1,0 +1,30 @@
+{%extends "bootstrap/base.html"%}
+<!-- used to create a quick form -->
+{%import "bootstrap/wtf.html" as wtf%}
+{% block title %}Login{% endblock %}
+
+{%block content%}
+<div class="container">
+    {#{ wtf.quick_form(form, novalidate=True)}#}
+    <h1>Login</h1>
+    <!-- This is where our form will go. -->
+    <form method="POST" action="{{url_for('login')}}" novalidate>
+        {{ form.csrf_token }}
+        <p>
+            <!-- adding a label to show what info is required setting the input size to be 30 -->
+            {{ form.email.label }} <br> {{ form.email(size=30) }}
+            <!-- checking for errors  -->
+            {%for err in form.email.errors %}
+            <span style="color: red;"><br>{{err}}</span>
+            {%endfor%}
+        </p>
+        <p>
+            {{ form.password.label }} <br> {{ form.password(size=30) }}
+            <!-- checking for errors  -->
+            {%for err in form.password.errors %}
+            <span style="color: red;"><br>{{err}}</span>
+            {%endfor%}
+        </p>
+        {{form.submit}}
+</div>
+{%endblock%}

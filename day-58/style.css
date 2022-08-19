@@ -1,0 +1,51 @@
+/* .navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+} */
+
+/* .nav-link {
+    padding: 0.5rem 0.5rem;
+} */
+
+/* .navbar-nav {
+    padding: 0;
+    padding-top: 0.5rem;
+    --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+} */
+
+/* .navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    display: list-item;
+    text-align: -webkit-match-parent;
+} */
+
+.carousel-item {
+    height: 500px;
+}
+
+/* if the screen is 900px and below the color should be red */
+@media (max-width: 900px) {
+    body {
+        color: red;
+    }
+}

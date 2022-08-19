@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+
+<body>
+    <!-- putting the double braces makes it evaluate as python code -->
+    <h1>Hello {{name}}</h1>
+    <h2>{{5 * 6}}</h2>
+    <!-- to use the variable gotten from python just write the name -->
+    <h3>Random Number: {{num}}</h3>
+    <!-- this python jnja code creates a hyperlink for what it takes to get to the function  get_blog 
+        - the url_for is equivalent to app.url_for and it takes in the name of the method it can also add in parameters similar to the render template -->
+    <!-- <a href="{#{ url_for('get_blog')}#}">Go to blog</a> -->
+    <a href="{{ url_for('get_blog', num=3 )}}">Go to blog</a>
+    <footer>
+        &copy;Copyright {{year}}. Built by Robotosail
+    </footer>
+</body>
+
+</html>
