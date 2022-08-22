@@ -462,3 +462,26 @@ Flask basic setup:
 
 
 z-index in css only works when all elements position is set
+
+Jinja:
+    Extending files
+        to use a file as a template at the start of the html file type {%extends "base.html"%}
+
+    Include Keyword:
+        inorder to reduce repetition in multiple files like in the case of a navbar which is expected to be on all pages
+        remove the html for the navbar and put it in a different html file
+        use {%include "header.html"%}
+
+    Setting variables
+        to set variable in jinja use the set keyword
+
+    If statement:
+        to write an if statement using jinja type
+        {%if condition%}
+            ...code to be ran
+        {%endif%}
+
+    For statement:
+        {%for item in list%}
+            ...code to be ran.
+        {%endfor%}

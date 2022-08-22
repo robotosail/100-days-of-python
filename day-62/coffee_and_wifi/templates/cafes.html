@@ -1,0 +1,83 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Restaurants{% endblock %}
+{%block styles%}
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+{%endblock%}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>All Cafes</h1>
+
+      <table class="table">
+        <!-- This is where you will write the code to render a Bootstrap 
+          Table that contains all the information from the 
+          cafe-data.csv file. -->
+        <thead>
+          <tr>
+            {%for cafe in range(cafes[0]|length) %}
+            <th>{{cafes[0][cafe]}}</th>
+            {%endfor%}
+          </tr>
+        </thead>
+        <tbody>
+          <!-- looping through the data and turning it into a table 
+          in order not to print the table head make sure to start from the number 1 -->
+          {%for cafe in range(1, cafes|length) %}
+          <tr>
+            <td>
+              <!-- Cafe Name -->
+              {{cafes[cafe][0]}}
+            </td>
+            <td>
+              <!-- Cafe location -->
+
+              <a href="{{cafes[cafe][1]}}" target="_blank">See on Google Maps</a>
+
+            </td>
+            <td>
+              <!-- Cafe Openings -->
+
+              {{cafes[cafe][2]}}
+
+            </td>
+            <td>
+              <!-- Cafe Closings -->
+
+              {{cafes[cafe][3]}}
+
+            </td>
+            <td>
+              <!-- Cafe stars -->
+
+              {{cafes[cafe][4]}}
+
+            </td>
+            <td>
+              <!-- wifi strength -->
+
+              {{cafes[cafe][5]}}
+
+            </td>
+            <td>
+              <!-- Cafe power -->
+
+              {{cafes[cafe][6]}}
+
+            </td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+
+      <p><a href="{{url_for('home')}}">Return to index page</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
