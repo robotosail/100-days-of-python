@@ -75,3 +75,7 @@ db.create_all()
 # book_to_delete = Book.query.get(book_id)
 # db.session.delete(book_to_delete)
 # db.session.commit()
+
+# # deletes a table
+# User.__table__.drop(db.engine)
+# db.session.commit()
