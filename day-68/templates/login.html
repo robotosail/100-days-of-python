@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="box">
+    <h1>Login</h1>
+
+    <form action="{{ url_for('login') }}" method="post">
+        <!-- showing the flash messages -->
+        <!-- setting messages to equal get_flashed_messages(with_categories=True) -->
+        {%with messages = get_flashed_messages(with_categories=true)%}
+        <!-- checking if any flash messages exist -->
+        {%if messages %}
+        <!-- looping through the messages -->
+        <p class=flashes>
+            <!-- the order matters category comes first and message second -->
+            {%for category, message in messages%}
+
+        <p class="{{category}}">{{message}}</p>
+        {%endfor%}
+        </p>
+        {%endif%}
+        {%endwith%}
+        <input type="text" name="email" placeholder="Email" required="required" />
+        <input type="password" name="password" placeholder="Password" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+    </form>
+</div>
+
+{% endblock %}
