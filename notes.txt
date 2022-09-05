@@ -485,3 +485,14 @@ Jinja:
         {%for item in list%}
             ...code to be ran.
         {%endfor%}
+
+# Git:
+    git status: shows untracked files, or files that have changes made to them
+    git add filename: adds the untracked and/or modified file to the list.
+    git add . : adds all the untracked and/or modified file to the list.
+    git commit -m "your message": commits the tracked file. with a message.
+    git diff filename: compares the current version of the file to the version before it.
+    git checkout filename: rollsback or goes back to the last version that was commited in the local repository.
+    git log: show what commits were made and when it was made.
+    git remote add whatyouwanttocalltheremoterepo url_of_remote_repo_on_github: creates a new remote repository for pushing local repository to remote repository.
+    git push -u name_of_your_repo the_name_of_the_branch: pushes local repository to the remote repository.
