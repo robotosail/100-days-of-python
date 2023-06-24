@@ -1,5 +1,3 @@
-from importlib.resources import contents
-from re import A
 import turtle
 
 ALIGN = "center"
