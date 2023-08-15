@@ -1,0 +1,6 @@
+secrets.txt
+#use pound sign to comment
+# using the asteriks symbol will 
+# omit all files with the specified ending for example
+# *.txt
+.git
