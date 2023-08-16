@@ -17,16 +17,17 @@ from flask_login import (
 )
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
+import os
 
 # INITIALIZING
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "8BYkEfBA6O6donzWlSihBXox7C0sKR6b"
+app.config["SECRET_KEY"] = os.environ.get("FLASK_KEY")
 ckeditor = CKEditor(app)
 Bootstrap(app)
 Base = declarative_base()
 
 # CONNECT TO DB
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URI", "sqlite:///database.db")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
@@ -240,6 +241,26 @@ def about():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+
+# MAIL_ADDRESS = os.environ.get("EMAIL_KEY")
+# MAIL_APP_PW = os.environ.get("PASSWORD_KEY")
+
+# @app.route("/contact", methods=["GET", "POST"])
+# def contact():
+#     if request.method == "POST":
+#         data = request.form
+#         send_email(data["name"], data["email"], data["phone"], data["message"])
+#         return render_template("contact.html", msg_sent=True)
+#     return render_template("contact.html", msg_sent=False)
+#
+#
+# def send_email(name, email, phone, message):
+#     email_message = f"Subject:New Message\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
+#     with smtplib.SMTP("smtp.gmail.com") as connection:
+#         connection.starttls()
+#         connection.login(MAIL_ADDRESS, MAIL_APP_PW)
+#         connection.sendmail(MAIL_ADDRESS, MAIL_APP_PW, email_message)
 
 
 @app.route("/new-post", methods=["GET", "POST"])

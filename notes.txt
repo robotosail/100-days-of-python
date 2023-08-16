@@ -1,5 +1,4 @@
 
-
 '''
 # Comparison Operators
 
@@ -511,6 +510,7 @@ Flask basic setup:
     python -m flask run instead of flask run
 
 
+
 z-index in css only works when all elements position is set
 
 Jinja:
@@ -555,3 +555,16 @@ Jinja:
     git branch: gives you a list of your branches
         >> git branch <name of the branch>: creates an new branch type 
     git clone <url>: allows you to clone your repository to your local file
+    git merge <branch name>: merges the branch name with the current branch you are on.
+
+
+WSGI: stands for Web Server Gateway interface. used to run python applications on the server
+
+# doing pip install -r requirements.txt will install the packages in the requirements file.
+
+procfiles: contains instructions on how to run a file
+    in day 69 in the procfile you see web: gunicorn main:app
+    This will tell our hosting provider to create a web worker that is able to receive HTTP requests. 
+    The Procfile also says to use gunicorn to serve your web app.
+    And finally it specifies the Flask app object is the main.py file.
+    That way the hosting provider knows about the entry point for the app and what our app is called.
