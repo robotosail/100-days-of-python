@@ -547,9 +547,11 @@ Jinja:
     git log: show what commits were made and when it was made.
     git remote add whatyouwanttocalltheremoterepo url_of_remote_repo_on_github: creates a new remote repository for pushing local repository to remote repository.
     git push -u name_of_your_repo the_name_of_the_branch: pushes local repository to the remote repository.
-    ls -a allows you to see hidden files in cmd terminal
+    ls -a: allows you to see hidden files in cmd terminal
     gitignore files: allows you to specify what can't be added and uploaded into your git repository.
-        to do this create a file called .gitignore
+        >>to do this create a file called .gitignore
     git rm --cached -r . : removes all staged files, that were added using git add
     git remote -v: check what the remote is configure to
     git branch: gives you a list of your branches
+        >> git branch <name of the branch>: creates an new branch type 
+    git clone <url>: allows you to clone your repository to your local file
