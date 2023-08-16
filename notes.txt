@@ -552,3 +552,4 @@ Jinja:
         to do this create a file called .gitignore
     git rm --cached -r . : removes all staged files, that were added using git add
     git remote -v: check what the remote is configure to
+    git branch: gives you a list of your branches
