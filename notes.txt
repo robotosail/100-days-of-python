@@ -551,3 +551,4 @@ Jinja:
     gitignore files: allows you to specify what can't be added and uploaded into your git repository.
         to do this create a file called .gitignore
     git rm --cached -r . : removes all staged files, that were added using git add
+    git remote -v: check what the remote is configure to
