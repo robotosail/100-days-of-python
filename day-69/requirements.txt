@@ -1,4 +1,4 @@
-Bootstrap_Flask==4.0.2
+Flask-Bootstrap4==4.0.2
 Flask==2.2.5
 Flask_CKEditor==0.4.6
 Flask_Login==0.6.2
