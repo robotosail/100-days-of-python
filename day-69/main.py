@@ -102,8 +102,9 @@ class Comment(db.Model, Base):
     text = db.Column(db.String, nullable=False, unique=False)
 
 # creates the database
-# with app.app_context():
-#     db.create_all()
+
+with app.app_context(): # uncomment for production
+    db.create_all()
 
 
 @login_manager.user_loader
